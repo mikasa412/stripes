@@ -3,6 +3,8 @@ import os # default module
 from dotenv import load_dotenv
 from discord.ext import bridge
 
+print('starting up...')
+
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
@@ -17,22 +19,23 @@ emojis = {
     'cabbit': '<:cabbit:1475948544576983315>',
     'jamas': '<:jamas:1475953247117119701>',
     'bluepikmin': '<:bluepikmin:1475953370148634811>',
-    'potguy': '<:potguy:1475953493209649152>',
-    'splat': '<:splat:1475953723766210700>',
-    'uaucat': '<:uaucat:1475953924153540891>',
-    'popo': '<:popo:1475954041409241183>',
-    'joob': '<:joob:1475954431471386796>',
-    'emjo': '<:emjo:1475954433455034388>',
     'whatsapp': '<:whatsapp:1475954438299586571>',
     'redsapp': '<:redsapp:1475954437322309722>',
     'bluesapp': '<:bluesapp:1475954434449211422>',
-    'evil': '<:evil:1475954436172943402>',
-    'fear': '<:fear:1475954438999900271>',
-    'scott': '<:scott:1475954442372382920>',
+    'potguy': '<:potguy:1475953493209649152>',
     'gold': '<:gold:1483516758458634471>',
     'upvote': '<:upvote:1483532455842414723>',
-    'downvote': '<:downvote:1483532510011850792>'
-}
+    'downvote': '<:downvote:1483532510011850792>',
+    'splat': '<:splat:1475953723766210700>',
+    'uaucat': '<:uaucat:1475953924153540891>',
+    'popo': '<:popo:1475954041409241183>',
+    'pou': '<:pou:1483915454111289455>',
+    'joob': '<:joob:1475954431471386796>',
+    'emjo': '<:emjo:1475954433455034388>',
+    'evil': '<:evil:1475954436172943402>',
+    'fear': '<:fear:1475954438999900271>',
+    'scott': '<:scott:1475954442372382920>'
+    }
 
 @bot.event
 async def on_ready(): print(f"logged in as {bot.user}")
