@@ -75,7 +75,7 @@ const tree: { [key: string]: Command } = {
                 const result = await sqlConn.query(`SELECT * FROM ${process.env.sql_usertable} WHERE HuserID = ${mID};`);
 
                 if (result.length == 0) {
-                    await sqlConn.query(`INSERT INTO ${process.env.sql_usertable} (HuserID) VALUES (${mID})`);
+                    await sqlConn.query(`INSERT INTO ? (HuserID) VALUES (?)`, [process.env.sql_usertable, mID]);
                     await interaction.reply('settings initialized!' + (arg(interaction, 1) ? ' (extra command data ignored)' : ''));
                     sqlConn.release();
                     return;
